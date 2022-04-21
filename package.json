@@ -1,0 +1,22 @@
+{
+  "name": "hire-me",
+  "version": "1.0.0",
+  "description": "",
+  "main": "web2/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eddybuilds/hire-me.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eddybuilds/hire-me/issues"
+  },
+  "homepage": "https://github.com/eddybuilds/hire-me#readme",
+  "dependencies": {
+    "truffle": "^5.5.10"
+  }
+}
