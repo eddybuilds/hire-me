@@ -18,9 +18,9 @@ contract Payments {
   }
 
   function destroySmartContract() public {
-        require(msg.sender == owner, "You are not the owner");
-        selfdestruct(owner);
-    }
+    require(msg.sender == owner, "You are not the owner");
+    selfdestruct(owner);
+  }
 
   function receiveMoney() public payable {
     assert(receivedPayments[msg.sender] + msg.value >= receivedPayments[msg.sender]);
@@ -28,13 +28,13 @@ contract Payments {
   }
 
   function withdrawMoney(uint _amount) public {
-        require(_amount <= receivedPayments[msg.sender], "not enough funds.");
-        assert(receivedPayments[msg.sender] >= receivedPayments[msg.sender] - _amount);
-        receivedPayments[msg.sender] -= _amount;
-        myAccount.transfer(_amount);
-    } 
+    require(_amount <= receivedPayments[msg.sender], "not enough funds.");
+    assert(receivedPayments[msg.sender] >= receivedPayments[msg.sender] - _amount);
+    receivedPayments[msg.sender] -= _amount;
+    myAccount.transfer(_amount);
+  } 
 
   receive() external payable {
-      receiveMoney();
+    receiveMoney();
   }
 }
